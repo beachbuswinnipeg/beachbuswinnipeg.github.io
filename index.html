@@ -3,25 +3,30 @@
 <html>
 
     <head>
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <!-- Verbose -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+        <!-- minified -->
+        <!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+
     </head>
 
     <body>
 
+        <h1>Why does Winnipeg not have a bus to the beach?</h1>
+
+        <div id="app">
+            {{message}}
+        </div>
+
         <script>
-            var helloVue = new Vue({
+            var app = new Vue({
                 el: '#app',
                 data: {
                     message: 'Provincial funding.'
                 }        
             });
         </script>
-
-        <h1>Why does Winnipeg not have a bus to the beach?</h1>
-
-        <div id="app">
-            {{ message }}
-        </div>
 
     </body>
 
