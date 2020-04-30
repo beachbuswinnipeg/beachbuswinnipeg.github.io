@@ -2,9 +2,26 @@
 
 <html>
 
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+
     <body>
 
-        <h1>Why does Winnipeg not have a Beach Bus?</h1>
+        <script>
+            var helloVue = new Vue({
+                el: '#app',
+                data: {
+                    message: 'Provincial funding.'
+                }        
+            });
+        </script>
+
+        <h1>Why does Winnipeg not have a bus to the beach?</h1>
+
+        <div id="helloVue">
+            {{ message }}
+        </div>
 
     </body>
 
