@@ -13,10 +13,10 @@
 
     <body>
 
-        <h1>Why does Winnipeg not have a bus to the beach?</h1>
-
-        <div id="app">
-            {{message}}
+        <div id="app" style="display: flex; flex-direction: column;">
+            <div v-for="heading in mainHeadings">
+                <h1 style="font-family: sans-serif; color: rgb(75,75,75)">{{heading.text}}</h1>
+            </div>
         </div>
 
         <script src="app.js"></script>
