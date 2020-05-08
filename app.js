@@ -1,14 +1,27 @@
-var app = new Vue({
-    el: '#app',
-    data: {
-        mainHeadings: [
-            {text: "There is no bus from Winnipeg to any beach."},
-            {text: "There should be a bus to the beach.", points:[
-                {text: "Get cars off the road and thereby reduce greenhouse gas emissions."},
-                {text: "Get people into nature, with all the associated health benefits."}
-            ]},
-            {text: "Why is there not a bus to the beach?"},
-            {text: "How can we get a bus to the beach?"}
-        ]
-    }        
+
+
+Vue.component('top-menu', {
+    template: `
+        <div style="display: flex; flex-direction: row; position: fixed; width: 100%; background: white; justify-content:space-around;">
+            <router-link to="act">Act Now</router-link>
+            <router-link to="why">Why?</router-link>
+        <div>
+    `
+})
+
+const act = {template: '<div>ACTING</div>'};
+const why = {template: '<div>Because, duh.</div>'};
+
+const routes = [
+    {path: '/act', component: act },
+    {path: '/why', component: why }
+];
+
+const router = new VueRouter({
+    routes
 });
+
+
+const app = new Vue({
+    router
+}).$mount('#app');

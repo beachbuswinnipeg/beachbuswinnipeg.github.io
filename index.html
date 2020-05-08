@@ -3,25 +3,18 @@
 <html>
 
     <head>
-        <!-- Verbose -->
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-        <!-- minified -->
-        <!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
-
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
     </head>
 
     <body>
 
-        <div id="app" style="display: flex; flex-direction: column;">
-            <div v-for="heading in mainHeadings">
-                <h1 style="font-family: sans-serif; color: rgb(55,55,55)">{{heading.text}}</h1>
-                <div v-for="point in heading.points">{{point.text}}</div>
-            </div>
+        <div id="app">
+            <top-menu></top-menu>
+            <router-view style="padding-top: 1em"></router-view>
         </div>
 
         <script src="app.js"></script>
-
     </body>
 
 </html>
