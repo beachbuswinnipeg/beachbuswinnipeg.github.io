@@ -26,7 +26,7 @@ const act = {
         },
 
         findReps: function() {
-            axios.get(`https://represent.opennorth.ca/postcodes/${this.formatPostalCode(this.postalCode)}/`, { crossdomain: true })
+            axios.get(`https://represent.opennorth.ca/postcodes/${this.formatPostalCode(this.postalCode)}/`, { crossDomain: true })
                 .then(this.showReps)
                 .catch(this.logError);
         },
