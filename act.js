@@ -3,7 +3,7 @@ const act = {
     template: `
     <div>
         The best way to act is to contact your city, provincial, and federal representatives
-        <form>
+        <form onsubmit="return false">
             <label>Enter your postal code reps: <input type="text" v-model="postalCode" /></label>
             <input type="submit" value="Go" v-on:click="findReps()" />
         </form>
@@ -29,7 +29,6 @@ const act = {
             axios.get(`https://represent.opennorth.ca/postcodes/${this.formatPostalCode(this.postalCode)}/`, { crossDomain: true })
                 .then(this.showReps)
                 .catch(this.logError);
-            return false;
         },
 
         formatPostalCode: function(postalCode){
