@@ -26,9 +26,14 @@ const act = {
         },
 
         findReps: function() {
-            axios.get(`https://represent.opennorth.ca/postcodes/${this.postalCode}`)
+            axios.get(`https://represent.opennorth.ca/postcodes/${this.formatPostalCode(this.postalCode)}/`)
                 .then(this.showReps)
                 .catch(this.logError);
+        },
+
+        formatPostalCode: function(postalCode){
+            return postalCode.replace(/[\s-]/, "").toUpperCase();
         }
+
     }
 };
