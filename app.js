@@ -9,8 +9,6 @@ Vue.component('top-menu', {
     `
 })
 
-const act = {template: '<div>ACTING</div>'};
-const why = {template: '<div>Because, duh.</div>'};
 
 const routes = [
     {path: '/act', component: act },

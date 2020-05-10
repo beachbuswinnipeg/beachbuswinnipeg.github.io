@@ -1,0 +1,1 @@
+const why = {template: '<div>Because, duh.</div>'};
